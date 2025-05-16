@@ -3,7 +3,8 @@
   "version": "0.0.1-alpha.0",
   "description": "",
   "scripts": {
-    "prerelease": "npm version prepatch --preid=alpha",
+    "pre_pathc_alpha": "npm version prepatch --preid=alpha",
+    "pre_release": "npm version prerelease",
     "publish": "npm publish --access public"
   },
   "keywords": [
