@@ -63,8 +63,8 @@ const put = <T>(
   options?: RequestInit
 ): Promise<T> => request<T>({ ...options, endpoint, method: "PUT", body });
 
-const del = <T>(endpoint: string, options?: RequestInit): Promise<T> =>
-  request<T>({ ...options, endpoint, method: "DELETE" });
+const del = <T>(endpoint: string, body: any, options?: RequestInit): Promise<T> =>
+  request<T>({ ...options, endpoint, method: "DELETE", body });
 
 const patch = <T>(
   endpoint: string,
