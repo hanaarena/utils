@@ -1,6 +1,6 @@
 {
   "name": "@lanz/utils",
-  "version": "0.0.1-alpha.2",
+  "version": "0.0.1-alpha.3",
   "description": "",
   "scripts": {
     "pre_patch_alpha": "npm version prepatch --preid=alpha",
