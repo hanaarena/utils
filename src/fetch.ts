@@ -72,4 +72,20 @@ const patch = <T>(
   options?: RequestInit
 ): Promise<T> => request<T>({ ...options, endpoint, method: "PATCH", body });
 
-export { get, post, put, del, patch };
+const upload = async <T>(
+  endpoint: string,
+  body: any,
+  options?: RequestInit
+): Promise<T> => {
+  const response = await fetch(endpoint, { ...options, method: "POST", body });
+  if (!response.ok) {
+    const errorMsg = await response.json();
+    throw new Error(
+      `${(errorMsg as { message: string })?.message || response.statusText}`
+    );
+  }
+  const data: T = await response.json();
+  return data;
+};
+
+export { get, post, put, del, patch, upload };
