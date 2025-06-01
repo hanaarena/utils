@@ -1,2 +1,4 @@
 test/
 *.lock
+src
+package-lock.json
