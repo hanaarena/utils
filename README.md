@@ -11,9 +11,9 @@ npm install @lanz/utils
 Import utilities:
 
 ```javascript
+// GET request
 import { get } from '@lanz/utils';
 
-// GET request
 const data = await get('/api/data');
 ```
 
